@@ -10,7 +10,7 @@ A card game where you could be a real pokemon trainer! Catching wild pokemons an
 
 ![](Wireframe/1.JPG)
 ![](Wireframe/2.JPG)
-![](Wireframe/3.JPG)
+![](Wireframe/3.png)
 ![](Wireframe/4.JPG)
 ![](Wireframe/5.JPG)
 ![](Wireframe/6.JPG)
