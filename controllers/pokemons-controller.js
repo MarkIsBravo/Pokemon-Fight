@@ -4,8 +4,9 @@ const pokemonsController={};
 pokemonsController.index=(req,res)=>{
     Pokemon.findAll()
     .then(pokemon=>{
-        res.render('pokemon/pokemon-index',{
+        res.render('pokemons/pokemon-index',{
             currentPage:'index',
+            message:'ok',
             data:pokemon
         });
     })
@@ -30,7 +31,9 @@ pokemonsController.create=(req,res)=>{
 pokemonsController.show=(req,res)=>{
     Pokemon.findById(req.params.id)
     .then(pokemon=>{
-        res.render('pokemon/pokemon-single',{
+        res.render('pokemons/pokemon-single',{
+            currentPage:'show',
+            message:'ok',
             data:pokemon
         })
     })

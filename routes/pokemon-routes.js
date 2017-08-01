@@ -4,7 +4,7 @@ const authHelpers=require('../services/auth/auth-helpers');
 
 const pokemonsController=require('../controllers/pokemons-controller');
 
-pokemonRoutes.get('/',pokemonsController.index);
+pokemonRoutes.get('/pokemon-index',pokemonsController.index);
 pokemonRoutes.post('/',authHelpers.loginRequired,pokemonsController.create);
 
 pokemonRoutes.get('/add',authHelpers.loginRequired,(req,res)=>{
