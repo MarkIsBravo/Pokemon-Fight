@@ -9,5 +9,5 @@ CREATE TABLE IF NOT EXISTS users(
     inventory INTEGER
 );
 
-ALTER TABLE pokemon
+ALTER TABLE pokemons
 ADD COLUMN user_id INTEGER REFERENCES users(id);
