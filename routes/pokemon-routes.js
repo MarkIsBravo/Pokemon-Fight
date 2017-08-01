@@ -1,5 +1,5 @@
 const express=require('express');
-const todoRoutes=express.Router();
+const pokemonRoutes=express.Router();
 const authHelpers=require('../services/auth/auth-helpers');
 
 const pokemonsController=require('../controllers/pokemons-controller');
