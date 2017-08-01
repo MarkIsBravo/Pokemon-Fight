@@ -7,7 +7,7 @@ usersController.index=(req,res)=>{
     console.log('usersController');
     User.findUserPokemons(req.user.id)
     .then(pokemons=>{
-        res.render('auth/user',{
+        res.render('auth/userhome',{
             currentPage:'index',
             message:'ok',
             user:req.user,
@@ -30,7 +30,7 @@ usersController.create=(req,res)=>{
     }).then(user=>{
         req.login(user,(err)=>{
             if(err)return next(err);
-            res.redirect('/user');
+            res.redirect('/userhome');
         });
     }).catch(err=>{
         console.log(err);

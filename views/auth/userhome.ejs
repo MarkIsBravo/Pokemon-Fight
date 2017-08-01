@@ -1,0 +1,11 @@
+<% include ../partials/boilerplate %>
+
+<div class='container'>
+    <h1>Hello, <%= user.nickname %>!</h1>
+    <p>Your pokémons are waiting for you...</p>
+    <form action='/pokemons/pokemon-index'>
+        <input type="submit" value="My Pokémons" />
+    </form>
+    <a href='/auth/logout'>Logout</a>
+</div>
+<% include ../partials/end %>
