@@ -32,7 +32,7 @@ Stages:
 * Collect food: there will be a bowl of flower growing up every 2 mins on the profile page. Click on the grown-up flower to collect 'FOOD', adding 1 to user's inventory. The flower is only collectable 2 mins after last collect event. The flower will not grow anymore after 2 mins even if not collected. Only after collected would flower start growing again.
 * Combat: a list of other users, click to see their profiles and select to compete against them. After combat started, random pokemon will be picked from both sides. User will be able to see them and choose the amount of 'FOOD' they want to bet on their pokemon (minimum 1 and will be subtracted from their inventory column immediately). The higher the HP & Attack, the higher chance they have to win the combat (always less than 100%). If user wins, doubled amount of 'FOOD' will be added to inventory. If user loses, the bet amount of 'FOOD' will be added to opponent's inventory column.
 
-Database: pokemon_fight
+Database: poke_fight
 * users table: containing all user's info, user_id and inventory.
 * pokemon: containing pokemons caught from the pokeapi database, including user_id(renference to users table), id, attack, hp, description, image.
 
