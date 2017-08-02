@@ -1,0 +1,16 @@
+<% include ../partials/boilerplate %>
+
+<div class='container'>
+    <% include ../partials/nav %>
+
+    <% for(let pokemon of data){ %>
+    <ul>
+        <a href='/pokemons/<%=pokemon.id%>'>
+            <b><%=pokemon.name%></b>
+        </a>
+    </ul>
+<% } %>
+    
+    <a href='/auth/logout'>Logout</a>
+</div>
+<% include ../partials/end %>

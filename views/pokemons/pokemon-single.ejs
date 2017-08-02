@@ -1,0 +1,15 @@
+<% include ../partials/boilerplate %>
+
+ <% include ../partials/nav %>
+
+<div class='container'>
+    <img src='https://img.pokemondb.net/artwork/<%=data.name%>.jpg'>
+    <ul>
+        <b><%=data.name%></b>
+        <li>Type:<%=data.type%></li>
+        <li>Attack:<%=data.attack%></li>
+        <li>Defense:<%=data.defense%></li>
+    </ul>
+</div>
+
+<% include ../partials/end %>
