@@ -39,12 +39,13 @@ usersController.create=(req,res)=>{
 }
 
 usersController.list=(req,res)=>{
-    User.findAll()
+    User.findOthers(req.user.id)
     .then(users=>{
         res.render('pokemons/pokemon-combat',{
             currentPage:'list',
             message:'ok',
-            data:users
+            user:req.user,
+            data:users,
         });
     })
     .catch(err=>{
@@ -60,7 +61,7 @@ usersController.show=(req,res)=>{
             currentPage:'start',
             message:'ok',
             user:req.user,
-            data:pokemons
+            data:pokemons,
         });
     })
     .catch(err=>{
