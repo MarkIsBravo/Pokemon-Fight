@@ -45,7 +45,7 @@ app.use('/pokemons',pokemonRoutes);
 const authRoutes=require('./routes/auth-routes');
 app.use('/auth',authRoutes);
 const userRoutes=require('./routes/user-routes');
-app.use('/userhome',userRoutes);
+app.use('/user',userRoutes);
 
 app.get('*',(req,res)=>{
     res.status(404).send('not found!');

@@ -1,17 +1,19 @@
 const Pokemon=require('../models/pokemon');
+const User=require('../models/user');
 const pokemonsController={};
 
 pokemonsController.index=(req,res)=>{
-    Pokemon.findAll()
+    User.findUserPokemons(req.user.id)
     .then(pokemon=>{
         res.render('pokemons/pokemon-index',{
             currentPage:'index',
             message:'ok',
+            user:req.user,
             data:pokemon
         });
     })
     .catch(err=>{
-        console.log(err)
+        console.log(err);
         res.status(500).json(err);
     })
 };
@@ -22,10 +24,14 @@ pokemonsController.create=(req,res)=>{
         type:req.body.type,
         attack:req.body.attack,
         defense:req.body.defense
-    })
+    },req.user.id)
     .then(pokemon=>{
         res.send(pokemon)
     })
+    .catch(err=>{
+        console.log(err);
+        res.status(500).json(err);
+    });
 };
 
 pokemonsController.show=(req,res)=>{
@@ -37,6 +43,10 @@ pokemonsController.show=(req,res)=>{
             data:pokemon
         })
     })
+    .catch(err=>{
+        console.log(err);
+        res.status(500).json(err);
+    });
 };
 
 module.exports=pokemonsController;

@@ -1,0 +1,13 @@
+<% include ../partials/boilerplate %>
+
+<div class='container'>
+    <% include ../partials/nav %>
+
+    <% for(let user of data){ %>
+    <ul>
+            <b><%=user.nickname%></b>
+    </ul>
+<% } %>
+    
+</div>
+<% include ../partials/end %>

@@ -30,7 +30,7 @@ usersController.create=(req,res)=>{
     }).then(user=>{
         req.login(user,(err)=>{
             if(err)return next(err);
-            res.redirect('/userhome');
+            res.redirect('/');
         });
     }).catch(err=>{
         console.log(err);

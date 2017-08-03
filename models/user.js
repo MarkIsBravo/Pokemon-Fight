@@ -25,4 +25,8 @@ User.findUserPokemons=id=>{
     `,[id]);
 };
 
+User.findAll=()=>{
+    return db.query('SELECT * FROM users');
+};
+
 module.exports=User;
