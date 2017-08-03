@@ -4,11 +4,11 @@
     <% include ../partials/nav %>
 
     <% for(let user of data){ %>
-    <ul>
-        <a href='/user/combat/<%=user.id%>'>
+    <div class='users'>
+        <a href='/user/fight/<%=user.id%>'>
             <b><%=user.nickname%></b>
         </a>
-    </ul>
+    </div>
 <% } %>
     
 </div>

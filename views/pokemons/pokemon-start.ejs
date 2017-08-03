@@ -2,14 +2,28 @@
 
 <div class='container'>
     <% include ../partials/nav %>
-
-    <% for(let pokemon of data){ %>
-    <ul>
-        <a href='/pokemons/<%=pokemon.id%>'>
-            <b><%=pokemon.name%></b>
-        </a>
-    </ul>
-<% } %>
-    
+    <div class='card'>
+        <img src='https://img.pokemondb.net/artwork/<%=data.first.name%>.jpg'>
+        <ul>
+            <b><%=data.first.name%></b>
+            <li>Type:<%=data.first.type%></li>
+            <li>Attack:<%=data.first.attack%></li>
+            <li>Defense:<%=data.first.defense%></li>
+        </ul>
+    </div>
+    <div class='card'>
+        <img src='https://img.pokemondb.net/artwork/<%=data.second.name%>.jpg'>
+        <ul>
+            <b><%=data.second.name%></b>
+            <li>Type:<%=data.second.type%></li>
+            <li>Attack:<%=data.second.attack%></li>
+            <li>Defense:<%=data.second.defense%></li>
+        </ul>
+    </div>
+    <div class='bet'>
+        <!-- <img src='some minus sign'> -->
+        <h3>BET <small>1</small> FOOD</h3>
+        <!-- <img src='some plus sign'> -->
+    </div>
 </div>
 <% include ../partials/end %>

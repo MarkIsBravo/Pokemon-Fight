@@ -32,4 +32,13 @@ User.findOthers=id=>{
     `,[id]);
 };
 
+User.pickRandom=id=>{
+    return db.one(`
+    SELECT * FROM pokemons
+    WHERE user_id=$1
+    ORDER BY RANDOM()
+    LIMIT 1
+    `,[id]);
+};
+
 module.exports=User;

@@ -41,7 +41,7 @@ usersController.create=(req,res)=>{
 usersController.list=(req,res)=>{
     User.findOthers(req.user.id)
     .then(users=>{
-        res.render('pokemons/pokemon-combat',{
+        res.render('pokemons/pokemon-fight',{
             currentPage:'list',
             message:'ok',
             user:req.user,
@@ -57,11 +57,34 @@ usersController.list=(req,res)=>{
 usersController.show=(req,res)=>{
     User.findUserPokemons(req.params.id)
     .then(pokemons=>{
+        res.render('pokemons/pokemon-ready',{
+            currentPage:'ready',
+            message:'ok',
+            user:req.user,
+            params:req.params,
+            data:pokemons,
+        });
+    })
+    .catch(err=>{
+        console.log(err);
+        res.status(500).json(err);
+    })
+}
+
+usersController.pick=(req,res)=>{
+    User.pickRandom(req.user.id)
+    .then(firstPokemon => {
+        return User.pickRandom(req.params.id)
+                .then(secondPokemon => {
+                    return { first: firstPokemon,
+                             second: secondPokemon}
+                })
+    })
+    .then(data => {
         res.render('pokemons/pokemon-start',{
             currentPage:'start',
             message:'ok',
-            user:req.user,
-            data:pokemons,
+            data:data,
         });
     })
     .catch(err=>{

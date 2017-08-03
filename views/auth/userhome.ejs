@@ -6,9 +6,17 @@
     <form action='/pokemons/pokemon-index'>
         <input type="submit" value="My Pokémons" />
     </form>
+    <form action='/pokemons/add'>
+        <input type="submit" value="Search Wild Pokémons" />
+    </form>
+    <form action='/user/fight'>
+        <input type="submit" value="Fight!" />
+    </form>
+    <form action='/auth/logout'>
+        <input type="submit" value="Log Out" />
+    </form>
     <div>
         <h3 class='food'><%= user.inventory %></h3>
     </div>
-    <a href='/auth/logout'>Logout</a>
 </div>
 <% include ../partials/end %>
