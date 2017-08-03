@@ -8,14 +8,14 @@ usersController.index=(req,res)=>{
     User.findUserPokemons(req.user.id)
     .then(pokemons=>{
         res.render('auth/userhome',{
-            currentPage:'index',
+            currentPage:'userhome',
             message:'ok',
             user:req.user,
             data:pokemons,
         });
     }).catch(err=>{
         console.log(err);
-        res.status(500).json({err:err});
+        res.status(500).json(err);
     });
 }
 
@@ -34,8 +34,23 @@ usersController.create=(req,res)=>{
         });
     }).catch(err=>{
         console.log(err);
-        res.status(500).json({error:err});
+        res.status(500).json(err);
     });
+}
+
+usersController.list=(req,res)=>{
+    User.findAll()
+    .then(users=>{
+        res.render('pokemons/pokemon-combat',{
+            currentPage:'list',
+            message:'ok',
+            data:users
+        });
+    })
+    .catch(err=>{
+        console.log(err);
+        res.status(500).json(err);
+    })
 }
 
 module.exports=usersController;
