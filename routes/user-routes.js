@@ -5,5 +5,6 @@ const authHelpers=require('../services/auth/auth-helpers');
 
 userRoutes.get('/',authHelpers.loginRequired,usersController.index);
 userRoutes.get('/combat',usersController.list);
+userRoutes.get('/combat/:id',usersController.show);
 
 module.exports=userRoutes;

@@ -5,7 +5,9 @@
 
     <% for(let user of data){ %>
     <ul>
+        <a href='/user/combat/<%=user.id%>'>
             <b><%=user.nickname%></b>
+        </a>
     </ul>
 <% } %>
     

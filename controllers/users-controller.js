@@ -53,4 +53,20 @@ usersController.list=(req,res)=>{
     })
 }
 
+usersController.show=(req,res)=>{
+    User.findUserPokemons(req.params.id)
+    .then(pokemons=>{
+        res.render('pokemons/pokemon-start',{
+            currentPage:'start',
+            message:'ok',
+            user:req.user,
+            data:pokemons
+        });
+    })
+    .catch(err=>{
+        console.log(err);
+        res.status(500).json(err);
+    })
+}
+
 module.exports=usersController;
