@@ -49,4 +49,14 @@ pokemonsController.show=(req,res)=>{
     });
 };
 
+pokemonsController.delete=(req,res)=>{
+    Pokemon.destroy(req.params.id)
+    .then(()=>{
+        res.redirect('/pokemons/pokemon-index');
+    }).catch(err=>{
+        console.log(err);
+        res.status(500).json(err);
+    });
+};
+
 module.exports=pokemonsController;

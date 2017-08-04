@@ -16,4 +16,6 @@ pokemonRoutes.get('/add',authHelpers.loginRequired,(req,res)=>{
 
 pokemonRoutes.get('/:id',pokemonsController.show);
 
+pokemonRoutes.delete('/:id',authHelpers.loginRequired,pokemonsController.delete);
+
 module.exports=pokemonRoutes;

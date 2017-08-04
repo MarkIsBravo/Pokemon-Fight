@@ -22,4 +22,11 @@ Pokemon.create=(pokemon,userid)=>{
     `,[pokemon.name,pokemon.type,pokemon.attack,pokemon.defense,userid])
 }
 
+Pokemon.destroy=(id)=>{
+    return db.none(`
+    DELETE FROM pokemons
+    WHERE id=$1
+    `,[id]);
+}
+
 module.exports=Pokemon;

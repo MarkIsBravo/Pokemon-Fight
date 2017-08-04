@@ -10,6 +10,9 @@
         <li>Attack:<%=data.attack%></li>
         <li>Defense:<%=data.defense%></li>
     </ul>
+    <form method='POST' action='/pokemons/<%= data.id %>?_method=DELETE'>
+        <input type='submit' value='Free This Pokémon' />
+    </form>
 </div>
 
 <% include ../partials/end %>
