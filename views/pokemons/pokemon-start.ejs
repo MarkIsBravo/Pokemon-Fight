@@ -2,22 +2,23 @@
 
 <div class='container'>
     <% include ../partials/nav %>
-    <div class='card'>
+    <div class='banner' style="height:30vh; width:100vw; position:absolute; font-size:10vh; font-weight:600;"></div> 
+    <div class='card1'>
         <img src='https://img.pokemondb.net/artwork/<%=data.first.name%>.jpg'>
         <ul>
             <b><%=data.first.name%></b>
             <li>Type:<%=data.first.type%></li>
-            <li>Attack:<%=data.first.attack%></li>
-            <li>Defense:<%=data.first.defense%></li>
+            <li class='attack'><%=data.first.attack%></li>
+            <li class='defense'><%=data.first.defense%></li>
         </ul>
     </div>
-    <div class='card'>
+    <div class='card2'>
         <img src='https://img.pokemondb.net/artwork/<%=data.second.name%>.jpg'>
         <ul>
             <b><%=data.second.name%></b>
             <li>Type:<%=data.second.type%></li>
-            <li>Attack:<%=data.second.attack%></li>
-            <li>Defense:<%=data.second.defense%></li>
+            <li class='attack'><%=data.second.attack%></li>
+            <li class='defense'><%=data.second.defense%></li>
         </ul>
     </div>
     <div class='bet'>
@@ -25,5 +26,14 @@
         <h3>BET <small>1</small> FOOD</h3>
         <!-- <img src='some plus sign'> -->
     </div>
+
+    <button>Fight!</button>
+    <script src='/src/jquery.js'></script>
+    <script src='/src/result.js'></script>
+
+    <form class='return' action='/user'>
+    </form>
+    <form class='again' action='/user/start/<%= params.id%>'>
+    </form>
 </div>
 <% include ../partials/end %>

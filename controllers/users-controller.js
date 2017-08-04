@@ -84,6 +84,7 @@ usersController.pick=(req,res)=>{
         res.render('pokemons/pokemon-start',{
             currentPage:'start',
             message:'ok',
+            params:req.params,
             data:data,
         });
     })
