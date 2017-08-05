@@ -41,4 +41,13 @@ User.pickRandom=id=>{
     `,[id]);
 };
 
+User.update=(num,id)=>{
+    return db,one(`
+    UPDATE users SET
+    inventory+=$1
+    WHERE id=$2
+    RETURNING *
+    `,[num,id])
+}
+
 module.exports=User;

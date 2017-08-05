@@ -94,4 +94,10 @@ usersController.pick=(req,res)=>{
     })
 }
 
+// usersController.update(req,res)=>{
+//     User.update({
+
+//     })
+// }
+
 module.exports=usersController;
