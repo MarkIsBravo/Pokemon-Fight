@@ -8,15 +8,15 @@ body{
 }
 .backcolor{
     background:rgba(0,0,0,0.5);
-    width:100vw;
-    height:98vh;
+    min-width:100vw;
+    min-height:98vh;
     display:flex;
     align-items:center;
     justify-content:center;
 }
 .container{
     width:80vw;
-    /* height:98vh; */
+    margin:10vh;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -24,7 +24,6 @@ body{
 }
 .message{
     font-family: 'Gloria Hallelujah', cursive;
-    font-size:8vh;
     margin:2vh;
 }
 .formList{
@@ -33,12 +32,24 @@ body{
     justify-content:center;
     flex-direction:column;
 }
-.userBtnList{
-    min-width:70vw;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-wrap:wrap;
+.box{
+    border:none;
+    margin:2vh;
+    height:6vh;
+    width:30vw;
+    font-size:4vh;
+    border:4px solid grey;
+    background:#FDF06F;
+    color:#0E38B1;
+    transition:0.4s;
+}
+::-webkit-input-placeholder{
+    color:white;
+}
+.box:hover{
+    background:#0E38B1;
+    color:#FDF06F;
+    transition:0.4s;
 }
 nav{
     display:flex;
@@ -64,6 +75,13 @@ a{
     font-family: 'Righteous', cursive;
     transition:0.8s;
 }
+.userBtnList{
+    min-width:70vw;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+}
 .buttons{
     border:none;
     margin:2vh;
@@ -73,28 +91,13 @@ a{
     font-family: 'Righteous', cursive;
     border:4px solid grey;
     white-space:normal;
+    transition:0.8s;
 }
 .buttons:hover{
     cursor:pointer;
     background:#FF8B8B;
     color:#FDF06F;
-}
-.box{
-    border:none;
-    margin:2vh;
-    height:7vh;
-    width:30vw;
-    font-size:4vh;
-    border:4px solid black;
-    background:#FDF06F;
-    color:#0E38B1;
-}
-::-webkit-input-placeholder{
-    color:white;
-}
-.box:hover{
-    background:#0E38B1;
-    color:#FDF06F;
+    transition:0.8s;
 }
 #indexBtn{
     min-height:20vh;
@@ -113,4 +116,41 @@ a{
     height:15vh;
     width:30vw;
     font-size:5vh;
+}
+.headshotList{
+    margin:10vh;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-around;
+} 
+.headshotDiv{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    height:13vh;
+    width:12vh;
+    margin:1vh;
+    border:2px solid #C5BEAA;
+    border-radius:10px;
+    background:#FDF06F;
+    transition:0.6s;
+}
+.headshotDiv:hover{
+    background:#FF8B8B;
+    transition:0.6s;
+}
+.headshotDiv:hover a{
+    color:#FDF06F;
+    transition:0.6s;
+}
+.headshot{
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    height:10vh;
+    width:10vh;
+    border:2px solid #C5BEAA;
+    border-radius:10px;
 }

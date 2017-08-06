@@ -1,17 +1,21 @@
 <% include ../partials/boilerplate %>
 
-<div class='container'>
+<div class='container' style='background:black;'>
     <% include ../partials/nav %>
-
-    <ul>
-    <% for(let pokemon of data){ %>
-        <li>
-            <a href='/pokemons/<%=pokemon.id%>'>
-                <b><%=pokemon.name%></b>
-            </a>
-        </li>
-<% } %>
-    </ul>
+    <h1 class='message' style='font-size:4vh;'>My Pokémons</h3>
+    <div class='headshotList'>
+        <% for(let pokemon of data){ %>
+            <div class='headshotDiv'>
+                <a href='/pokemons/<%=pokemon.id%>'>
+                    <div class='headshot' style="background-image:url('https://img.pokemondb.net/artwork/<%=pokemon.name%>.jpg');">
+                    </div>
+                </a>
+                <a href='/pokemons/<%=pokemon.id%>'>
+                    <b><%=pokemon.name%></b>
+                </a>
+            </div>
+        <% } %>
+    </div>
     
 </div>
 <% include ../partials/end %>
