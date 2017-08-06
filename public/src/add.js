@@ -5,6 +5,8 @@ $(()=>{
         $('.translateY').append($('.catchDiv'));
         $('.catchDiv').addClass('pokeballRotate');
         $('.translateY').addClass('pokeballTranslateY');
+        let $searching=$('<div>',{'id':'searchingText','class':'message'}).text('Searching for Wild Pokémon...');
+        $('.container').append($searching);
         const rand=Math.floor(Math.random()*721)+1;
         $.ajax({
             url:`http://pokeapi.co/api/v2/pokemon/${rand}`,
