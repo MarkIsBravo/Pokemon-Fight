@@ -1,6 +1,10 @@
 $(()=>{
     $('button').click(()=>{
         console.log('get a random pokemon');
+        $('button').remove();
+        $('.translateY').append($('.catchDiv'));
+        $('.catchDiv').addClass('pokeballRotate');
+        $('.translateY').addClass('pokeballTranslateY');
         const rand=Math.floor(Math.random()*721)+1;
         $.ajax({
             url:`http://pokeapi.co/api/v2/pokemon/${rand}`,
@@ -23,7 +27,9 @@ $(()=>{
             method:'POST',
             data:pokemon
         }).done(data=>{
-            window.location=`http://localhost:3000/pokemons/${data.id}`
+            setTimeout(()=>{
+                window.location=`http://localhost:3000/pokemons/${data.id}`
+            },4000)
         })
     }
 })

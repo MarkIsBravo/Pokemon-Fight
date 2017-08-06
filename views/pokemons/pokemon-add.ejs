@@ -1,9 +1,12 @@
 <% include ../partials/boilerplate %>
 
-<div class='container'>
+<div class='container' style="background:black;">
     <% include ../partials/nav %>
-
-    <button>Capture me a Pokemon!</button>
+    <div class='translateY'>
+    </div>
+    <div class='catchDiv'>
+        <button class='buttons' id='catchBtn'>Capture a Pokemon!</button>
+    </div>
 
     <script src='/src/jquery.js'></script>
     <script src='/src/add.js'></script>

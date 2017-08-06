@@ -16,6 +16,7 @@ body{
 }
 .container{
     width:80vw;
+    min-height:60vh;
     margin:10vh;
     display:flex;
     align-items:center;
@@ -56,13 +57,16 @@ nav{
     background:#FDF06F;
     width:100%;
     justify-content:space-around;
+     margin:0 0 5vh 0; 
+    padding:1vh 0;
+    height:6vh;
     transition:0.8s;
-    margin:0 0 5vh 0;
 }
 .navLink{
     display:inline-block;
     font-size:4vh;
-    padding:0 2vw;
+    padding:2vh 2vw;
+    margin:-1vh 0;
 }
 .navLink:hover{
     background:#FF8B8B;
@@ -102,7 +106,6 @@ a{
 #indexBtn{
     min-height:20vh;
     min-width:60vw;
-    /* border:5px solid black; */
     font-size:6vh;
     font-weight:600;
     margin:10vh; 
@@ -118,7 +121,7 @@ a{
     font-size:5vh;
 }
 .headshotList{
-    margin:10vh;
+    margin:10vh 10vw;
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
@@ -130,7 +133,9 @@ a{
     align-items:center;
     justify-content:center;
     height:13vh;
+    min-height:80px;
     width:12vh;
+    min-width:80px;
     margin:1vh;
     border:2px solid #C5BEAA;
     border-radius:10px;
@@ -150,7 +155,132 @@ a{
     background-repeat:no-repeat;
     background-position:center;
     height:10vh;
+    min-height:60px;
     width:10vh;
+    min-width:60px;
     border:2px solid #C5BEAA;
     border-radius:10px;
+}
+.card{
+    margin:5vh 0;
+    height:50vh;
+    width:45vh;
+    background:#FDF06F;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    border:2px solid #C5BEAA;
+    border-radius:10px;
+}
+.largePic{
+    height:35vh;
+    width:30vh;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    margin:2vh 0 1vh 0;
+    border:2px solid #C5BEAA;
+    border-radius:10px;
+}
+.info{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    justify-content:space-between;
+}
+.attAndDef{
+    height:10vh;
+    width:10vh;
+    /* background:black; */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    font-family: 'Righteous', cursive;
+    font-size:20px;
+    /* border:2px solid #C5BEAA;
+    border-radius:10px; */
+}
+.nameAndType{
+    font-family: 'Righteous', cursive;
+    color:#FF8B8B;
+    width:25vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+.name{
+    width:25vh;
+    font-size:4vh;
+    background:grey;
+    height:6.5vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0.1vh;
+    border:2px solid #C5BEAA;
+}
+.type{
+    width:25vh;
+    font-size:2vh;
+    background:grey;
+    height:3vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:2px solid #C5BEAA;
+}
+.attAndDefPic{
+    height:6vh;
+    width:6vh;
+    background-position:center;
+    background-size:80%;
+    background-repeat:no-repeat;
+}
+#freeBtn{
+    height:10vh;
+    width:30vw;
+    margin:0 0 5vh 0;
+    font-size:3vh;
+}
+#catchBtn{
+    height:16vh;
+    width:40vw;
+    font-size:6vh;
+}
+.catchDiv{
+    margin:16vh 0;
+    min-height:20vh;
+    min-width:20vh;
+}
+.pokeballRotate{
+    background-image:url('../images/pokeball.png');
+    background-position:center;
+    background-size:cover;
+    animation:rotate 1.5s infinite linear;
+}
+.pokeballTranslateY{
+    animation:translateY 0.5s infinite alternate-reverse ease-out;
+}
+@keyframes rotate{
+    0% {
+        transform:rotate(0);
+    }
+    50% {
+        transform:rotate(180deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+}
+@keyframes translateY{
+    0%{
+        transform:translateY(0vh);
+    }
+    100%{
+        transform:translateY(-5vh);
+    }
 }
