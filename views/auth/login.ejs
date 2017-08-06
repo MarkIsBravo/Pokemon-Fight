@@ -1,13 +1,13 @@
 <% include ../partials/boilerplate %>
 
 <div class='container'>
-  <form method='POST' action='/auth/login'>
-    <input name='username' type='text' placeholder='username' required />
-    <input name='password' type='password' placeholder='password' required />
-    <input type='submit' value='Log in!' />
+  <form class='formList' method='POST' action='/auth/login'>
+    <input class='box' name='username' type='text' placeholder='Trainer' required />
+    <input class='box' name='password' type='password' placeholder='Secret Code' required />
+    <input class='buttons logregBtn' type='submit' value='Log in !' />
   </form>
   <form action='/auth/register'>
-    <input type="submit" value="Register!" />
+    <input class='buttons logregBtn' type="submit" value="Register !" />
   </form>
 </div>
 

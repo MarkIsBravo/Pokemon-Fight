@@ -1,12 +1,10 @@
 <% include ./partials/boilerplate %>
 
 <div class='container'>
-  <h1><%= message %></h1>
-  <div class='buttons'>
+  <h1 class='message'><%= message %></h1>
   <form action='/auth/login'>
-    <input type="submit" value="Go to the world of Pokémons!" />
+    <input class='buttons' id='indexBtn' type="submit" value="Go to the world of Pokémons!" />
   </form>
-  </div>
 </div>
 
 <% include ./partials/end %>
