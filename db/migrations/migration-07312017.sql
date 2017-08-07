@@ -1,4 +1,4 @@
-\c pokemon_fight
+-- \c pokemon_fight
 
 CREATE TABLE IF NOT EXISTS pokemons(
     id SERIAL PRIMARY KEY,
