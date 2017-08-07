@@ -9,7 +9,7 @@ $(()=>{
         $('.container').append($searching);
         const rand=Math.floor(Math.random()*721)+1;
         $.ajax({
-            url:`http://pokeapi.co/api/v2/pokemon/${rand}`,
+            url:`https://pokeapi.co/api/v2/pokemon/${rand}`,
             method:'GET',
             success:(data)=>{
                 const pokemon={
