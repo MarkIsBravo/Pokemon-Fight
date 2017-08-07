@@ -2,6 +2,13 @@ const db=require('../db/config');
 
 const User={};
 
+User.findById=(id)=>{
+    return db.oneOrNone(`
+    SELECT * FROM users
+    WHERE id=$1
+    `,[id]);
+}
+
 User.findByUserName=userName=>{
     return db.oneOrNone(`
     SELECT * FROM users
@@ -50,13 +57,15 @@ User.pickRandom=id=>{
     `,[id]);
 };
 
-User.update=(num,id)=>{
-    return db,one(`
+User.update=(user,id)=>{
+    return db.one(`
     UPDATE users SET
-    inventory+=$1
-    WHERE id=$2
+    username=$1,
+    email=$2,
+    nickname=$3
+    WHERE id=$4
     RETURNING *
-    `,[num,id])
+    `,[user.username,user.email,user.nickname,id])
 }
 
 module.exports=User;

@@ -1,0 +1,12 @@
+<% include ../partials/boilerplate %>
+
+<div class='container'>
+  <form class='formList' method='POST' action='/user/?_method=PUT'>
+    <input class='box' name='username' type='text' value='<%= data.username %>' />
+    <input class='box' name='email' type='email' value='<%= data.email %>' />
+    <input class='box' name='nickname' type='text' value='<%= data.nickname %>' />
+    <input class='buttons logregBtn' type='submit' value='Edit!' />
+  </form>
+</div>
+
+<% include ../partials/end %>

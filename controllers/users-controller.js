@@ -38,21 +38,34 @@ usersController.create=(req,res)=>{
     });
 }
 
-// usersController.list=(req,res)=>{
-//     User.findOthers(req.user.id)
-//     .then(users=>{
-//         res.render('pokemons/pokemon-fight',{
-//             currentPage:'list',
-//             message:'ok',
-//             user:req.user,
-//             data:users,
-//         });
-//     })
-//     .catch(err=>{
-//         console.log(err);
-//         res.status(500).json(err);
-//     })
-// }
+usersController.update=(req,res)=>{
+    User.update({
+        username:req.body.username,
+        email:req.body.email,
+        nickname:req.body.nickname,
+    },req.user.id)
+    .then(user=>{
+        res.redirect('/user');
+    })
+    .catch(err=>{
+        console.log(err);
+        res.status(500).json(err);
+    })
+}
+
+usersController.edit=(req,res)=>{
+    User.findById(req.user.id)
+    .then(user=>{
+        res.render('auth/user-edit',{
+            currentPage:'edit',
+            data:user,
+        });
+    })
+    .catch(err=>{
+        console.log(err);
+        res.status(500).json(err);
+    })
+}
 
 usersController.list=(req,res)=>{
     User.findOthers(req.user.id)
