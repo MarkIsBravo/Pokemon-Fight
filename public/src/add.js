@@ -30,8 +30,8 @@ $(()=>{
             data:pokemon
         }).done(data=>{
             setTimeout(()=>{
-                // window.location=`https://shrouded-garden-20738.herokuapp.com/pokemons/${data.id}`
-                window.location=`http://localhost:3000/pokemons/${data.id}`
+                window.location=`https://shrouded-garden-20738.herokuapp.com/pokemons/${data.id}`
+                // window.location=`http://localhost:3000/pokemons/${data.id}`
             },4000)
         })
     }
