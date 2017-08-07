@@ -1,14 +1,14 @@
 <% include ../partials/boilerplate %>
 
 
-<div class='container' style='background:black;'>
+<div class='container' style="background-image:url('/images/singleBackground.jpg'); background-size:cover; background-repeat:no-repeat; background-position:center;">
     <% include ../partials/nav %>
     <div class='containerPartial'>
         <div class='card'>
             <div class='largePic' style="background-image:url('https://img.pokemondb.net/artwork/<%=data.name%>.jpg');">
             </div>
             <div class='info'>
-                <div class='attAndDef' style="color:red; font-size:4vh;">
+                <div class='attAndDef' style="color:black; font-size:4vh;">
                     <div class='attAndDefPic' style="background-image:url('/images/attack.png');"></div>
                     <%=data.attack%>
                 </div>
@@ -16,7 +16,7 @@
                     <div class='name'><%=data.name%></div>
                     <div class='type'>Type:<%=data.type%></div>
                 </div>
-                <div class='attAndDef' style="color:blue; font-size:4vh;">
+                <div class='attAndDef' style="color:grey; font-size:4vh;">
                     <div class='attAndDefPic' style="background-image:url('/images/defense.png');"></div>
                     <%=data.defense%>
                 </div>

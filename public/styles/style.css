@@ -171,7 +171,7 @@ a{
     margin:5vh 0;
     height:50vh;
     width:45vh;
-    background:#FDF06F;
+    background:#0E38B1;
     display:flex;
     align-items:center;
     flex-direction:column;
@@ -222,7 +222,7 @@ a{
 .name{
     width:25vh;
     font-size:4vh;
-    background:grey;
+    background:#FDF06F;
     height:6.5vh;
     display:flex;
     align-items:center;
@@ -233,7 +233,7 @@ a{
 .type{
     width:25vh;
     font-size:2vh;
-    background:grey;
+    background:#FDF06F;
     height:3vh;
     display:flex;
     align-items:center;

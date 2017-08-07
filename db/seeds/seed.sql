@@ -1,2 +1,2 @@
-\c pokemon_fight
+-- \c pokemon_fight
 \i pokemons.sql
