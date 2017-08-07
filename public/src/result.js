@@ -7,6 +7,9 @@ $(()=>{
         let defense2=$('.card2 .defense').text();
         const compare=((attack1-defense2)+(defense1-attack2))/400;
         const rand=Math.random()*(2+compare*4)
+        // this multiplication could be changed. 
+        // depends on how you want the card difference 
+        // to affect the result.
 
         let lost
         if(rand>=1){
