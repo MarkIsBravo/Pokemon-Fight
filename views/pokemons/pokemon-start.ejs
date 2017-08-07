@@ -3,12 +3,12 @@
 <div class='container' style="background-image:url('/images/fight.png'); background-position:center;">
     <% include ../partials/nav %>
     <div class='containerPartial' style='flex-direction:row;'>
-        <div class='banner message' style="color:rgba(<%=Math.floor(Math.random()*255)%>,<%=Math.floor(Math.random()*255)%>,<%=Math.floor(Math.random()*255)%>,1)"></div> 
+        <div class='banner message' style="color:#FF8B8B"></div> 
         <div class='card1 card'>
             <div class='largePic' style="background-image:url('https://img.pokemondb.net/artwork/<%=data.first.name%>.jpg')">
             </div>
             <div class='info'>
-                <div class='attAndDef' style="color:red; font-size:4vh;">
+                <div class='attAndDef' style="color:black; font-size:4vh;">
                     <div class='attAndDefPic' style="background-image:url('/images/attack.png');"></div>
                     <%=data.first.attack%>
                 </div>
@@ -16,7 +16,7 @@
                     <div class='name'><%=data.first.name%></div>
                     <div class='type'>Type:<%=data.first.type%></div>
                 </div>
-                <div class='attAndDef' style="color:blue; font-size:4vh;">
+                <div class='attAndDef' style="color:grey; font-size:4vh;">
                     <div class='attAndDefPic' style="background-image:url('/images/defense.png');"></div>
                     <%=data.first.defense%>
                 </div>
@@ -27,7 +27,7 @@
             <div class='largePic' style="background-image:url('https://img.pokemondb.net/artwork/<%=data.second.name%>.jpg')">
             </div>
             <div class='info'>
-                <div class='attAndDef' style="color:red; font-size:4vh;">
+                <div class='attAndDef' style="color:black; font-size:4vh;">
                     <div class='attAndDefPic' style="background-image:url('/images/attack.png');"></div>
                     <%=data.second.attack%>
                 </div>
@@ -35,7 +35,7 @@
                     <div class='name'><%=data.second.name%></div>
                     <div class='type'>Type:<%=data.second.type%></div>
                 </div>
-                <div class='attAndDef' style="color:blue; font-size:4vh;">
+                <div class='attAndDef' style="color:grey; font-size:4vh;">
                     <div class='attAndDefPic' style="background-image:url('/images/defense.png');"></div>
                     <%=data.second.defense%>
                 </div>

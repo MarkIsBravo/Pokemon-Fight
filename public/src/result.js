@@ -32,8 +32,10 @@ $(()=>{
         $('.banner').css('animation','rotate 1s linear');
         if($('.container .card1').length>0){
             $('.banner').text('You Won!');
+            $('.banner').css('border','2vh solid #FF8B8B');
         }else if($('.container .card2').length>0){
             $('.banner').text('Try again later!');
+            $('.banner').css('border','2vh solid #FF8B8B');
         }
         
         let $returnBtn=$("<input class='buttons againOrReturn' type='submit' value='Return' />");

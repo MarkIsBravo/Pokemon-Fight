@@ -171,11 +171,11 @@ a{
     margin:5vh 0;
     height:50vh;
     width:45vh;
-    background:#0E38B1;
+    background:#C39D63;
     display:flex;
     align-items:center;
     flex-direction:column;
-    border:4px solid #C5BEAA;
+    border:4px solid #0E38B1;
     border-radius:10px;
 }
 .largePic{
@@ -186,7 +186,7 @@ a{
     background-size:fill;
     background-color:white;
     margin:2vh 0 1vh 0;
-    border:4px solid #C5BEAA;
+    border:4px solid #0E38B1;
     border-radius:10px;
 }
 .info{
@@ -228,7 +228,7 @@ a{
     align-items:center;
     justify-content:center;
     margin:0.1vh;
-    border:2px solid #C5BEAA;
+    border:2px solid #0E38B1;
 }
 .type{
     width:25vh;
@@ -238,7 +238,7 @@ a{
     display:flex;
     align-items:center;
     justify-content:center;
-    border:2px solid #C5BEAA;
+    border:2px solid #0E38B1;
 }
 .attAndDefPic{
     height:6vh;
@@ -340,11 +340,12 @@ a{
     font-size:3vh;
 }
 .banner{
-    width:100vw; 
+    padding:1vh;
     position:absolute; 
     text-align:center;
-    font-size:10vh; 
+    font-size:15vh; 
     font-weight:600;
+    transition:1s linear;
 }
 @keyframes dimensional{
   0%{
@@ -376,7 +377,7 @@ a{
         transform:translateX(45vh) scale(0.5,0.5);
     }
     75%{
-        transform:translateX(22.5vh) scale(0.25,0.25);
+        transform:translateX(22.5vh) scale(0,0);
     }
     100%{
         transform:translateX(0vh) scale(0.5,0.5);
@@ -390,7 +391,7 @@ a{
         transform:translateX(0vh) scale(0.5,0.5);
     }
     25%{
-        transform:translateX(-22.5vh) scale(0.25,0.25);
+        transform:translateX(-22.5vh) scale(0,0);
     }
     50%{
         transform:translateX(-45vh) scale(0.5,0.5);
