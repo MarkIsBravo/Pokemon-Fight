@@ -2,14 +2,16 @@
 
 <div class='container' style="background:black;">
     <% include ../partials/nav %>
-    <div class='translateY'>
+    <div class='containerPartial'>
+        <div class='translateY'>
+        </div>
+        <div class='catchDiv'>
+            <button class='buttons' id='catchBtn'>Capture a Pokemon!</button>
+        </div>
+    
+        <script src='/src/jquery.js'></script>
+        <script src='/src/add.js'></script>
     </div>
-    <div class='catchDiv'>
-        <button class='buttons' id='catchBtn'>Capture a Pokemon!</button>
-    </div>
-
-    <script src='/src/jquery.js'></script>
-    <script src='/src/add.js'></script>
 </div>
 
 <% include ../partials/end %>

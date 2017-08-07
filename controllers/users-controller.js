@@ -38,14 +38,37 @@ usersController.create=(req,res)=>{
     });
 }
 
+// usersController.list=(req,res)=>{
+//     User.findOthers(req.user.id)
+//     .then(users=>{
+//         res.render('pokemons/pokemon-fight',{
+//             currentPage:'list',
+//             message:'ok',
+//             user:req.user,
+//             data:users,
+//         });
+//     })
+//     .catch(err=>{
+//         console.log(err);
+//         res.status(500).json(err);
+//     })
+// }
+
 usersController.list=(req,res)=>{
     User.findOthers(req.user.id)
     .then(users=>{
+        return User.pokemonCount(req.user.id)
+        .then(pokemonCount=>{
+            return{users:users,
+                   pokemonCount:pokemonCount}
+        })
+    })
+    .then(data=>{
         res.render('pokemons/pokemon-fight',{
             currentPage:'list',
             message:'ok',
-            user:req.user,
-            data:users,
+            pokemonCount:data.pokemonCount,
+            users:data.users,
         });
     })
     .catch(err=>{

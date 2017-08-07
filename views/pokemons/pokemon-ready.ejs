@@ -1,18 +1,26 @@
 <% include ../partials/boilerplate %>
 
-<div class='container'>
+<div class='container' style='background:black;'>
     <% include ../partials/nav %>
-
-    <ul>
-    <% for(let pokemon of data){ %>
-        <li>
-            <a href='/pokemons/<%=pokemon.id%>'>
-                <b><%=pokemon.name%></b>
-            </a>
-        </li>
-    <% } %>
-    </ul>
-    <a href='/user/start/<%=params.id%>'>Start!</a>
-    
+    <div class='containerPartial'>
+        <h2 class='message' style='font-size:4vh;'>Take a peek at opponent's Pokémons</h2>
+        <p>Your pokémons have a chance to meet anyone of these pokémons in the Fight.</p>
+        <div class='headshotList'>
+            <% for(let pokemon of data){ %>
+                <div class='headshotDiv'>
+                    <a href='/pokemons/<%=pokemon.id%>'>
+                        <div class='headshot' style="background-image:url('https://img.pokemondb.net/artwork/<%=pokemon.name%>.jpg');">
+                        </div>
+                    </a>
+                    <a style='height:6vh; min-height:30px; display:flex; align-items:center; justify-content:center;' href='/pokemons/<%=pokemon.id%>'>
+                        <b><%=pokemon.name%></b>
+                    </a>
+                </div>
+            <% } %>
+        </div>
+        <form action='/user/start/<%=params.id%>'>
+            <input id='startBtn' class='buttons' type="submit" value="Start!" />
+        </form>
+    </div>
 </div>
 <% include ../partials/end %>

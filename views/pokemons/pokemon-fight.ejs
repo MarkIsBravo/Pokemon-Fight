@@ -1,15 +1,28 @@
 <% include ../partials/boilerplate %>
 
-<div class='container'>
+<div class='container' style='background:black;'>
     <% include ../partials/nav %>
-
-    <% for(let user of data){ %>
-    <div class='users'>
-        <a href='/user/fight/<%=user.id%>'>
-            <b><%=user.nickname%></b>
-        </a>
+    <div class='containerPartial'>
+        <h2 id='fightText' class='message'>Fight List</h2>
+        <p>Here are the trainers you can choose to challenge.<br />
+           You can click on their trainer card to browse the pokémons they possess.<br />
+           Opponent pokémons are randomly selected from your team and challenger's team.<br />
+           The better pokémons you own, the higher chance to win the fight! Good luck!</p>
+        <div class='usersList'>
+            <% for(let i=0;i<users.length;i++){ %>
+            <div class='users'>
+                <a href='/user/fight/<%=users[i].id%>'  style="color:rgba(<%=Math.floor(Math.random()*255)%>,<%=Math.floor(Math.random()*255)%>,<%=Math.floor(Math.random()*255)%>,1)">
+                    <p style="background:#FDF06F; font-size:4vh;">Trainer: <%=users[i].nickname%><p>
+                    <p>Pokémon Count: <%=pokemonCount[i].count%></p>
+                </a>
+            </div>
+            <% } %>
+            <!-- <% for(let num of pokemonCount){ %>
+                <div class='counts'>
+                    <b><%=num.count%></b>
+                </div>
+            <% } %> -->
+        </div>
     </div>
-<% } %>
-    
 </div>
 <% include ../partials/end %>

@@ -16,12 +16,18 @@ body{
 }
 .container{
     width:80vw;
-    min-height:60vh;
     margin:10vh;
     display:flex;
     align-items:center;
     justify-content:center;
     flex-direction:column;
+}
+.containerPartial{
+    min-height:54vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
 }
 .message{
     font-family: 'Gloria Hallelujah', cursive;
@@ -57,7 +63,7 @@ nav{
     background:#FDF06F;
     width:100%;
     justify-content:space-around;
-     margin:0 0 5vh 0; 
+    margin:0 0 5vh 0; 
     padding:1vh 0;
     height:6vh;
     transition:0.8s;
@@ -289,4 +295,24 @@ a{
 #searchingText{
     font-size:4vh;
     margin:-15vh 0 15vh 0;
+}
+.usersList{
+    margin:5vh;
+}
+.users{
+    border:4px solid grey;
+    margin:2vh;
+    width:30vw;
+    height:8vh;
+    font-size:3vh;
+}
+#fightText{
+    font-size:4vh;
+    margin:5vh 0;
+}
+#startBtn{
+    height:10vh;
+    width:30vw;
+    margin:0 0 5vh 0;
+    font-size:3vh;
 }

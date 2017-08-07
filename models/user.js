@@ -32,6 +32,15 @@ User.findOthers=id=>{
     `,[id]);
 };
 
+User.pokemonCount=id=>{
+    return db.query(`
+    SELECT COUNT (user_id)
+    FROM pokemons
+    WHERE user_id!=$1
+    GROUP BY user_id
+    `,[id]);
+};
+
 User.pickRandom=id=>{
     return db.one(`
     SELECT * FROM pokemons
