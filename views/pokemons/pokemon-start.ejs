@@ -1,39 +1,60 @@
 <% include ../partials/boilerplate %>
 
-<div class='container'>
+<div class='container' style='background:black;'>
     <% include ../partials/nav %>
-    <div class='banner' style="height:30vh; width:100vw; position:absolute; font-size:10vh; font-weight:600;"></div> 
-    <div class='card1'>
-        <img src='https://img.pokemondb.net/artwork/<%=data.first.name%>.jpg'>
-        <ul>
-            <b><%=data.first.name%></b>
-            <li>Type:<%=data.first.type%></li>
-            <li class='attack'><%=data.first.attack%></li>
-            <li class='defense'><%=data.first.defense%></li>
-        </ul>
+    <div class='containerPartial' style='flex-direction:row;'>
+        <div class='banner message' style="color:rgba(<%=Math.floor(Math.random()*255)%>,<%=Math.floor(Math.random()*255)%>,<%=Math.floor(Math.random()*255)%>,1)"></div> 
+        <div class='card1 card'>
+            <div class='largePic' style="background-image:url('https://img.pokemondb.net/artwork/<%=data.first.name%>.jpg')">
+            </div>
+            <div class='info'>
+                <div class='attAndDef' style="color:red; font-size:4vh;">
+                    <div class='attAndDefPic' style="background-image:url('/images/attack.png');"></div>
+                    <%=data.first.attack%>
+                </div>
+                <div class='nameAndType'>
+                    <div class='name'><%=data.first.name%></div>
+                    <div class='type'>Type:<%=data.first.type%></div>
+                </div>
+                <div class='attAndDef' style="color:blue; font-size:4vh;">
+                    <div class='attAndDefPic' style="background-image:url('/images/defense.png');"></div>
+                    <%=data.first.defense%>
+                </div>
+            </div>
+        </div>
+        <div class='vs'></div>
+        <div class='card2 card'>
+            <div class='largePic' style="background-image:url('https://img.pokemondb.net/artwork/<%=data.second.name%>.jpg')">
+            </div>
+            <div class='info'>
+                <div class='attAndDef' style="color:red; font-size:4vh;">
+                    <div class='attAndDefPic' style="background-image:url('/images/attack.png');"></div>
+                    <%=data.second.attack%>
+                </div>
+                <div class='nameAndType'>
+                    <div class='name'><%=data.second.name%></div>
+                    <div class='type'>Type:<%=data.second.type%></div>
+                </div>
+                <div class='attAndDef' style="color:blue; font-size:4vh;">
+                    <div class='attAndDefPic' style="background-image:url('/images/defense.png');"></div>
+                    <%=data.second.defense%>
+                </div>
+            </div>
+        </div>
+        <div class='bet'>
+            <!-- <img src='some minus sign'> -->
+            <!-- <h3>BET <small>1</small> FOOD</h3> -->
+            <!-- <img src='some plus sign'> -->
+        </div>
+    
     </div>
-    <div class='card2'>
-        <img src='https://img.pokemondb.net/artwork/<%=data.second.name%>.jpg'>
-        <ul>
-            <b><%=data.second.name%></b>
-            <li>Type:<%=data.second.type%></li>
-            <li class='attack'><%=data.second.attack%></li>
-            <li class='defense'><%=data.second.defense%></li>
-        </ul>
-    </div>
-    <div class='bet'>
-        <!-- <img src='some minus sign'> -->
-        <h3>BET <small>1</small> FOOD</h3>
-        <!-- <img src='some plus sign'> -->
-    </div>
-
-    <button>Fight!</button>
-    <script src='/src/jquery.js'></script>
-    <script src='/src/result.js'></script>
-
-    <form class='return' action='/user'>
-    </form>
-    <form class='again' action='/user/start/<%= params.id%>'>
-    </form>
+        <button id='fightBtn' class='buttons'>Fight!</button>
+        <script src='/src/jquery.js'></script>
+        <script src='/src/result.js'></script>
+    
+        <form class='return' action='/user'>
+        </form>
+        <form class='again' action='/user/start/<%= params.id%>'>
+        </form>
 </div>
 <% include ../partials/end %>

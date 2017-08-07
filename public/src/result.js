@@ -17,17 +17,19 @@ $(()=>{
 
         $(`.card${lost}`).remove();
 
+        $('.vs').remove();
         $('.bet').remove();
         $('button').remove();
+        $('.banner').css('animation','rotate 1s linear');
         if($('.container .card1').length>0){
             $('.banner').text('You Won!');
         }else if($('.container .card2').length>0){
             $('.banner').text('Try again later!');
         }
         
-        let $returnBtn=$("<input type='submit' value='Return' />");
+        let $returnBtn=$("<input class='buttons againOrReturn' type='submit' value='Return' />");
         $('.return').append($returnBtn);
-        let $againBtn=$("<input type='submit' value='Again!' />");
+        let $againBtn=$("<input class='buttons againOrReturn' type='submit' value='Again!' />");
         $('.again').append($againBtn);
     })
 })

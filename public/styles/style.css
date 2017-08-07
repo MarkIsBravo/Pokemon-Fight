@@ -316,3 +316,49 @@ a{
     margin:0 0 5vh 0;
     font-size:3vh;
 }
+.vs{
+    height:10vh;
+    width:10vh;
+    background-image:url('../images/vs.png');
+    background-position:center;
+    background-size:30%;
+    background-repeat:no-repeat;
+    animation:scalexy 0.5s ease-out forwards;
+}
+@keyframes scalexy{
+  0%{
+    transform: scale(0,0);
+  }
+  100%{
+    transform: scale(7,7);
+  }
+}
+#fightBtn{
+    margin:5vh;
+    height:10vh;
+    width:30vw;
+    font-size:3vh;
+}
+.banner{
+    width:100vw; 
+    position:absolute; 
+    text-align:center;
+    font-size:10vh; 
+    font-weight:600;
+}
+@keyframes dimensional{
+  0%{
+    transform: perspective(200px) rotate3d(0,0,0,0deg);
+  }
+  50%{
+    transform: perspective(200px) rotate3d(1,1,-1,230deg);
+  }
+  100%{
+    transform: perspective(200px) rotate3d(1,2,1,110deg);
+  }
+}
+.againOrReturn{
+    height:10vh;
+    width:30vw;
+    font-size:3vh;
+}
