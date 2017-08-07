@@ -362,3 +362,34 @@ a{
     width:30vw;
     font-size:3vh;
 }
+.fightProcess1{
+    animation:scaleAndTranslate1 2s 4 linear;
+}
+@keyframes scaleAndTranslate1{
+    0%{
+        transform:translateX(0vh);
+    }
+    25%{
+        transform:translateX(22.5vh);
+    }
+    50%{
+        transform:translateX(45vh) 
+    }
+    100%{
+        transform:translateX(0vh);
+    }
+}
+.fightProcess2{
+    animation:scaleAndTranslate2 2s 4 linear;
+}
+@keyframes scaleAndTranslate2{
+    0%{
+        transform:translateX(0vh);
+    }
+    50%{
+        transform:translateX(-45vh);
+    }
+    100%{
+        transform:translateX(0vh);
+    }
+}

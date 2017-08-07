@@ -18,10 +18,16 @@ $(()=>{
             lost=1;
         }
 
-        $(`.card${lost}`).remove();
-
         $('.vs').remove();
         $('.bet').remove();
+        $('.card1').addClass('fightProcess1');
+        $('.card2').addClass('fightProcess2');
+
+        setTimeout(()=>{
+        $(`.card${lost}`).remove();
+        $('.card').removeClass('fightProcess1');
+        $('.card').removeClass('fightProcess2');
+
         $('button').remove();
         $('.banner').css('animation','rotate 1s linear');
         if($('.container .card1').length>0){
@@ -34,5 +40,7 @@ $(()=>{
         $('.return').append($returnBtn);
         let $againBtn=$("<input class='buttons againOrReturn' type='submit' value='Again!' />");
         $('.again').append($againBtn);
+
+        },4000)
     })
 })
