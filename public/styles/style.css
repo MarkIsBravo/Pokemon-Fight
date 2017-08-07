@@ -367,16 +367,19 @@ a{
 }
 @keyframes scaleAndTranslate1{
     0%{
-        transform:translateX(0vh);
+        transform:translateX(0vh) scale(0.5,0.5);
     }
     25%{
-        transform:translateX(22.5vh);
+        transform:translateX(22.5vh) scale(1,1);
     }
     50%{
-        transform:translateX(45vh) 
+        transform:translateX(45vh) scale(0.5,0.5);
+    }
+    75%{
+        transform:translateX(22.5vh) scale(0.25,0.25);
     }
     100%{
-        transform:translateX(0vh);
+        transform:translateX(0vh) scale(0.5,0.5);
     }
 }
 .fightProcess2{
@@ -384,12 +387,18 @@ a{
 }
 @keyframes scaleAndTranslate2{
     0%{
-        transform:translateX(0vh);
+        transform:translateX(0vh) scale(0.5,0.5);
+    }
+    25%{
+        transform:translateX(-22.5vh) scale(0.25,0.25);
     }
     50%{
-        transform:translateX(-45vh);
+        transform:translateX(-45vh) scale(0.5,0.5);
+    }
+    75%{
+        transform:translateX(-22.5vh) scale(1,1);
     }
     100%{
-        transform:translateX(0vh);
+        transform:translateX(0vh) scale(0.5,0.5);
     }
 }
