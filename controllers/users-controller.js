@@ -67,6 +67,23 @@ usersController.edit=(req,res)=>{
     })
 }
 
+usersController.show=(req,res)=>{
+    User.findUserPokemons(req.params.id)
+    .then(pokemons=>{
+        res.render('pokemons/pokemon-ready',{
+            currentPage:'ready',
+            message:'ok',
+            user:req.user,
+            params:req.params,
+            data:pokemons,
+        });
+    })
+    .catch(err=>{
+        console.log(err);
+        res.status(500).json(err);
+    })
+}
+
 usersController.list=(req,res)=>{
     User.findOthers(req.user.id)
     .then(users=>{
@@ -82,23 +99,6 @@ usersController.list=(req,res)=>{
             message:'ok',
             pokemonCount:data.pokemonCount,
             users:data.users,
-        });
-    })
-    .catch(err=>{
-        console.log(err);
-        res.status(500).json(err);
-    })
-}
-
-usersController.show=(req,res)=>{
-    User.findUserPokemons(req.params.id)
-    .then(pokemons=>{
-        res.render('pokemons/pokemon-ready',{
-            currentPage:'ready',
-            message:'ok',
-            user:req.user,
-            params:req.params,
-            data:pokemons,
         });
     })
     .catch(err=>{
