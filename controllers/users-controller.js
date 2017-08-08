@@ -94,12 +94,13 @@ usersController.list=(req,res)=>{
         })
     })
     .then(data=>{
-        res.render('pokemons/pokemon-fight',{
-            currentPage:'list',
-            message:'ok',
-            pokemonCount:data.pokemonCount,
-            users:data.users,
-        });
+        // res.render('pokemons/pokemon-fight',{
+        //     currentPage:'list',
+        //     message:'ok',
+        //     pokemonCount:data.pokemonCount,
+        //     users:data.users,
+        // });
+        res.json(data);
     })
     .catch(err=>{
         console.log(err);
