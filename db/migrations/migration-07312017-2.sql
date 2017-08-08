@@ -1,4 +1,4 @@
--- \c pokemon_fight
+\c pokemon_fight
 
 CREATE TABLE IF NOT EXISTS users(
     id SERIAL PRIMARY KEY,
@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS users(
     email VARCHAR(255) UNIQUE NOT NULL,
     password_digest TEXT NOT NULL,
     nickname VARCHAR(255),
+    pokemon_count INTEGER,
     inventory INTEGER
 );
 
