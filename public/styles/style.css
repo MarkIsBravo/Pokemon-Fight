@@ -183,7 +183,7 @@ a{
     width:30vh;
     background-repeat:no-repeat;
     background-position:center;
-    background-size:fill;
+    background-size:contain;
     background-color:white;
     margin:2vh 0 1vh 0;
     border:4px solid #0E38B1;

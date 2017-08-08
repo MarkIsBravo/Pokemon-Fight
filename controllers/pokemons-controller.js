@@ -32,6 +32,11 @@ pokemonsController.create=(req,res)=>{
         console.log(err);
         res.status(500).json(err);
     });
+    User.addPokemon(req.user.id)
+    .catch(err=>{
+        console.log(err);
+        res.status(500).json(err);
+    })
 };
 
 pokemonsController.show=(req,res)=>{

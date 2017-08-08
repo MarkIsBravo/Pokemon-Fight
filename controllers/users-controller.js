@@ -86,21 +86,20 @@ usersController.show=(req,res)=>{
 
 usersController.list=(req,res)=>{
     User.findOthers(req.user.id)
-    .then(users=>{
-        return User.pokemonCount(req.user.id)
-        .then(pokemonCount=>{
-            return{users:users,
-                   pokemonCount:pokemonCount}
-        })
-    })
+    // .then(users=>{
+    //     return User.pokemonCount(req.user.id)
+    //     .then(pokemonCount=>{
+    //         return{users:users,
+    //                pokemonCount:pokemonCount}
+    //     })
+    // })
     .then(data=>{
-        // res.render('pokemons/pokemon-fight',{
-        //     currentPage:'list',
-        //     message:'ok',
-        //     pokemonCount:data.pokemonCount,
-        //     users:data.users,
-        // });
-        res.json(data);
+        res.render('pokemons/pokemon-fight',{
+            currentPage:'list',
+            message:'ok',
+            data:data,
+        });
+        // res.json(data);
     })
     .catch(err=>{
         console.log(err);
@@ -127,14 +126,10 @@ usersController.pick=(req,res)=>{
     })
     .catch(err=>{
         console.log(err);
-        res.status(500).json(err);
+        res.status(500).render('pokemons/pokemon-error',{
+            currentPage:'error',
+        });
     })
 }
-
-// usersController.update(req,res)=>{
-//     User.update({
-
-//     })
-// }
 
 module.exports=usersController;

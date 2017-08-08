@@ -19,11 +19,20 @@ User.findByUserName=userName=>{
 User.create=user=>{
     return db.one(`
     INSERT INTO users
-    (username,email,password_digest,nickname,inventory)
-    VALUES ($1,$2,$3,$4,10)
+    (username,email,password_digest,nickname,pokemon_count,inventory)
+    VALUES ($1,$2,$3,$4,0,10)
     RETURNING *
     `,[user.username,user.email,user.password_digest,user.nickname]);
 };
+
+User.addPokemon=id=>{
+    return db.one(`
+    UPDATE users
+    SET pokemon_count=pokemon_count+1
+    WHERE id=$1
+    RETURNING *
+    `,[id]);
+}
 
 User.findUserPokemons=id=>{
     return db.manyOrNone(`
@@ -39,14 +48,14 @@ User.findOthers=id=>{
     `,[id]);
 };
 
-User.pokemonCount=id=>{
-    return db.query(`
-    SELECT COUNT (user_id)
-    FROM pokemons
-    WHERE user_id!=$1
-    GROUP BY user_id
-    `,[id]);
-};
+// User.pokemonCount=id=>{
+//     return db.query(`
+//     SELECT COUNT (user_id)
+//     FROM pokemons
+//     WHERE user_id!=$1
+//     GROUP BY user_id
+//     `,[id]);
+// };
 
 User.pickRandom=id=>{
     return db.one(`

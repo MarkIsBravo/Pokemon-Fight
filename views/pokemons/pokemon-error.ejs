@@ -1,0 +1,15 @@
+<% include ../partials/boilerplate %>
+
+<div class='container' style="background:black;">
+    <% include ../partials/nav %>
+    <div class='containerPartial'>
+        <h2 class='message' style='font-size:5vh;'>Pokémons want a fair fight...</h2>
+        <p>Please select a rival trainer with at least one Pokémon.</p>
+        <form action:'/user/fight'>
+            <input class='buttons againOrReturn' type='submit' value='Select Again'>
+        </form>
+        <div  style="height:60vh; width:70vh; background-image:url('/images/snorlax.png'); background-position:center; background-size:contain; background-repeat:no-repeat;">
+        </div>
+    </div>
+</div>
+<% include ../partials/end %>
