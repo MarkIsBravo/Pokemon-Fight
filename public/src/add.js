@@ -32,7 +32,7 @@ $(()=>{
             setTimeout(()=>{
                 // window.location=`https://shrouded-garden-20738.herokuapp.com/pokemons/${data.id}`
                 window.location=`/pokemons/${data.id}`
-            },4000)
+            },3000)
         })
     }
 })

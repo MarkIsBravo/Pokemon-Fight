@@ -33,6 +33,7 @@
     "morgan": "^1.8.2",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
-    "pg-promise": "^6.3.6"
+    "pg-promise": "^6.3.6",
+    "yarn": "^0.27.5"
   }
 }
