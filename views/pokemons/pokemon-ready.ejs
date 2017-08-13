@@ -8,11 +8,11 @@
         <div class='headshotList'>
             <% for(let pokemon of data){ %>
                 <div class='headshotDiv'>
-                    <a href='/pokemons/<%=pokemon.id%>'>
+                    <a href='/pokemons/other/<%=pokemon.id%>'>
                         <div class='headshot' style="background-image:url('https://img.pokemondb.net/artwork/<%=pokemon.name%>.jpg');">
                         </div>
                     </a>
-                    <a style='height:6vh; min-height:30px; display:flex; align-items:center; justify-content:center;' href='/pokemons/<%=pokemon.id%>'>
+                    <a style='height:6vh; min-height:30px; display:flex; align-items:center; justify-content:center;' href='/pokemons/other/<%=pokemon.id%>'>
                         <b><%=pokemon.name%></b>
                     </a>
                 </div>

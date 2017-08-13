@@ -54,6 +54,21 @@ pokemonsController.show=(req,res)=>{
     });
 };
 
+pokemonsController.showOther=(req,res)=>{
+    Pokemon.findById(req.params.id)
+    .then(pokemon=>{
+        res.render('pokemons/pokemon-singleOther',{
+            currentPage:'showOther',
+            message:'ok',
+            data:pokemon
+        })
+    })
+    .catch(err=>{
+        console.log(err);
+        res.status(500).json(err);
+    });
+};
+
 pokemonsController.delete=(req,res)=>{
     Pokemon.destroy(req.params.id)
     .then(()=>{
