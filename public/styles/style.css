@@ -91,6 +91,7 @@ a{
     align-items:center;
     justify-content:center;
     flex-wrap:wrap;
+    margin:0 0 3vh 0;
 }
 .buttons{
     border:none;
@@ -304,7 +305,7 @@ a{
     border:4px solid grey;
     margin:2vh;
     width:30vw;
-    height:8vh;
+    min-height:8vh;
     font-size:3vh;
 }
 .users:hover{
@@ -422,5 +423,33 @@ a{
     }
     100%{
         transform:translateX(0vh) scale(0.5,0.5);
+    }
+}
+
+@media (max-width:900px){
+    #indexBtn{
+        min-height:15vh;
+        min-width:50vw;
+        font-size:4vh;
+    }
+    .box{
+        height:5vh;
+        width:30vw;
+    }
+    .logregBtn{
+        min-height:8vh;
+        min-width:32vw;
+        font-size:4vh;
+    }
+    .userBtn{
+        height:12vh;
+        width:62vw;
+        font-size:4vh;
+    }
+    nav{
+        height:4vh;
+    }
+    .navLink{
+        font-size:3vw;
     }
 }
