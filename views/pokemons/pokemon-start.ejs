@@ -48,13 +48,14 @@
         </div>
     
     </div>
-        <button id='fightBtn' class='buttons'>Fight!</button>
-        <script src='/src/jquery.js'></script>
-        <script src='/src/result.js'></script>
-    
+    <button id='fightBtn' class='buttons'>Fight!</button>
+    <script src='/src/jquery.js'></script>
+    <script src='/src/result.js'></script>
+    <div class='buttonList' style='display:flex;'>
         <form class='return' action='/user'>
         </form>
         <form class='again' action='/user/start/<%= params.id%>'>
         </form>
+    </div>
 </div>
 <% include ../partials/end %>
