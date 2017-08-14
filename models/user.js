@@ -32,7 +32,16 @@ User.addPokemon=id=>{
     WHERE id=$1
     RETURNING *
     `,[id]);
-}
+};
+
+User.deletePokemon=id=>{
+    return db.one(`
+    UPDATE users
+    SET pokemon_count=pokemon_count-1
+    WHERE id=$1
+    RETURNING *
+    `,[id]);
+};
 
 User.findUserPokemons=id=>{
     return db.manyOrNone(`

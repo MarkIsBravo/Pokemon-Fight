@@ -77,6 +77,11 @@ pokemonsController.delete=(req,res)=>{
         console.log(err);
         res.status(500).json(err);
     });
+    User.deletePokemon(req.user.id)
+    .catch(err=>{
+        console.log(err);
+        res.status(500).json(err);
+    })
 };
 
 module.exports=pokemonsController;
