@@ -15,7 +15,9 @@ usersController.index=(req,res)=>{
         });
     }).catch(err=>{
         console.log(err);
-        res.status(500).json(err);
+        res.status(500).render('error',{
+            currentPage:'whoops',
+        });
     });
 }
 
@@ -34,7 +36,9 @@ usersController.create=(req,res)=>{
         });
     }).catch(err=>{
         console.log(err);
-        res.status(500).json(err);
+        res.status(500).render('error',{
+            currentPage:'whoops',
+        });
     });
 }
 
@@ -49,7 +53,9 @@ usersController.update=(req,res)=>{
     })
     .catch(err=>{
         console.log(err);
-        res.status(500).json(err);
+        res.status(500).render('error',{
+            currentPage:'whoops',
+        });
     })
 }
 
@@ -63,7 +69,9 @@ usersController.edit=(req,res)=>{
     })
     .catch(err=>{
         console.log(err);
-        res.status(500).json(err);
+        res.status(500).render('error',{
+            currentPage:'whoops',
+        });
     })
 }
 
@@ -80,19 +88,14 @@ usersController.show=(req,res)=>{
     })
     .catch(err=>{
         console.log(err);
-        res.status(500).json(err);
+        res.status(500).render('error',{
+            currentPage:'whoops',
+        });
     })
 }
 
 usersController.list=(req,res)=>{
     User.findOthers(req.user.id)
-    // .then(users=>{
-    //     return User.pokemonCount(req.user.id)
-    //     .then(pokemonCount=>{
-    //         return{users:users,
-    //                pokemonCount:pokemonCount}
-    //     })
-    // })
     .then(data=>{
         res.render('pokemons/pokemon-fight',{
             currentPage:'list',
@@ -103,7 +106,9 @@ usersController.list=(req,res)=>{
     })
     .catch(err=>{
         console.log(err);
-        res.status(500).json(err);
+        res.status(500).render('error',{
+            currentPage:'whoops',
+        });
     })
 }
 

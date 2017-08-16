@@ -16,6 +16,8 @@ body{
 }
 .container{
     width:80vw;
+    max-width:1000px;
+    min-width:450px;
     margin:10vh;
     display:flex;
     align-items:center;
@@ -32,6 +34,7 @@ body{
 .message{
     font-family: 'Gloria Hallelujah', cursive;
     margin:2vh;
+    text-align:center;
 }
 .formList{
     display:flex;
@@ -43,7 +46,8 @@ body{
     border:none;
     margin:2vh;
     height:6vh;
-    width:30vw;
+    width:29vw;
+    max-width:380px;
     font-size:4vh;
     border:4px solid grey;
     background:#FDF06F;
@@ -51,7 +55,7 @@ body{
     transition:0.4s;
 }
 ::-webkit-input-placeholder{
-    color:white;
+    color:grey;
 }
 .box:hover{
     background:#0E38B1;
@@ -86,7 +90,8 @@ a{
     transition:0.8s;
 }
 .userBtnList{
-    min-width:70vw;
+    width:70vw;
+    max-width:1000px;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -98,7 +103,7 @@ a{
     margin:2vh;
     color:#FF8B8B;
     background:#FDF06F;
-    border-radius:20px;
+    border-radius:2vh;
     font-family: 'Righteous', cursive;
     border:4px solid grey;
     white-space:normal;
@@ -111,25 +116,33 @@ a{
     transition:0.8s;
 }
 #indexBtn{
-    min-height:20vh;
-    min-width:60vw;
+    height:20vh;
+    width:60vw;
+    max-width:700px;
     font-size:6vh;
     font-weight:600;
     margin:10vh; 
 }
 .logregBtn{
     min-height:9vh;
-    min-width:30vw;
+    width:30vw;
+    max-width:400px;
     font-size:6vh;
 }
 .userBtn{
     height:15vh;
     width:30vw;
+    max-width:350px;
     font-size:5vh;
     margin:1vw;
 }
+.logoutBtn{
+    width:62vw; 
+    max-width:720px;
+}
 .headshotList{
     margin:10vh 10vw;
+    min-width:450px;
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
@@ -146,7 +159,7 @@ a{
     min-width:80px;
     margin:1vh;
     border:4px solid #C5BEAA;
-    border-radius:10px;
+    border-radius:1vh;
     background:#FDF06F;
     transition:0.6s;
 }
@@ -168,7 +181,7 @@ a{
     width:10vh;
     min-width:60px;
     border:4px solid #C5BEAA;
-    border-radius:10px;
+    border-radius:1vh;
 }
 .card{
     margin:5vh 0;
@@ -179,7 +192,7 @@ a{
     align-items:center;
     flex-direction:column;
     border:4px solid #0E38B1;
-    border-radius:10px;
+    border-radius:1vh;
 }
 .largePic{
     height:35vh;
@@ -190,7 +203,7 @@ a{
     background-color:white;
     margin:2vh 0 1vh 0;
     border:4px solid #0E38B1;
-    border-radius:10px;
+    border-radius:1vh;
 }
 .info{
     width:100%;
@@ -209,9 +222,9 @@ a{
     align-items:center;
     flex-direction:column;
     font-family: 'Righteous', cursive;
-    font-size:20px;
+    font-size:4vh;
     /* border:4px solid #C5BEAA;
-    border-radius:10px; */
+    border-radius:1vh; */
 }
 .nameAndType{
     font-family: 'Righteous', cursive;
@@ -258,6 +271,7 @@ a{
 #catchBtn{
     height:16vh;
     width:40vw;
+    max-width:600px;
     font-size:6vh;
 }
 .catchDiv{
@@ -332,6 +346,9 @@ a{
     font-size:4vh;
     margin:5vh 0;
 }
+#fightP{
+    font-size:2vh;
+}
 #startBtn{
     height:10vh;
     width:30vw;
@@ -383,7 +400,7 @@ a{
 .againOrReturn{
     height:10vh;
     width:20vw;
-    font-size:3vh;
+    font-size:4vh;
 }
 .fightProcess1{
     animation:scaleAndTranslate1 2s 4 linear;
@@ -430,11 +447,15 @@ a{
     #indexBtn{
         min-height:15vh;
         min-width:50vw;
-        font-size:4vh;
+        font-size:5vh;
     }
     .box{
         height:5vh;
         width:30vw;
+        margin:1vh;
+    }
+    .buttons{
+        margin:1vh;
     }
     .logregBtn{
         min-height:8vh;
@@ -442,14 +463,104 @@ a{
         font-size:4vh;
     }
     .userBtn{
-        height:12vh;
-        width:62vw;
+        height:10vh;
+        width:60vw;
+        max-width:350px;
+        min-width:300px;
         font-size:4vh;
     }
     nav{
         height:4vh;
+        min-height:25px;
     }
     .navLink{
         font-size:3vw;
+    }
+    #catchBtn{
+        font-size:5vh;
+    }
+    .headshotDiv{
+        height:12vh;
+        width:10vh;
+    }
+    .headshot{
+        height:8vh;
+        width:8vh;
+    }
+    .card{
+        height:45vh;
+        width:40vh;
+    }
+    .largePic{
+        height:30vh;
+        width:25vh;
+    }
+    .againOrReturn{
+        height:8vh;
+        font-size:3vh;
+    }
+    #freeBtn{
+        height:8vh;
+        font-size:2vh;
+    }
+    .card1{
+        height:34vw;
+        width:26vw;
+    }
+    .card1 .largePic{
+        margin:2vw 0;
+        height:20vw;
+        width:18vw;
+    }
+    .card1 .attAndDef{
+        height:10vw;
+        width:8vw;
+        font-size:3vw;
+    }
+    .card1 .nameAndType{
+        width:15vw;
+    }
+    .card1 .name{
+        width:14vw;
+        font-size:3vw;
+        height:5vw;
+    }
+    .card1 .type{
+        width:14vw;
+        height:3vw;
+    }
+    .card1 .attAndDefPic{
+        height:5vw;
+        width:5vw;
+    }
+    .card2{
+        height:34vw;
+        width:26vw;
+    }
+    .card2 .largePic{
+        margin:2vw 0;
+        height:20vw;
+        width:18vw;
+    }
+    .card2 .attAndDef{
+        height:10vw;
+        width:8vw;
+        font-size:3vw;
+    }
+    .card2 .nameAndType{
+        width:15vw;
+    }
+    .card2 .name{
+        width:14vw;
+        font-size:3vw;
+        height:5vw;
+    }
+    .card2 .type{
+        width:14vw;
+        height:3vw;
+    }
+    .card2 .attAndDefPic{
+        height:5vw;
+        width:5vw;
     }
 }

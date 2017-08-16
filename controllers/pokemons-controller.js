@@ -14,7 +14,9 @@ pokemonsController.index=(req,res)=>{
     })
     .catch(err=>{
         console.log(err);
-        res.status(500).json(err);
+        res.status(500).render('error',{
+            currentPage:'whoops',
+        });
     })
 };
 
@@ -30,12 +32,16 @@ pokemonsController.create=(req,res)=>{
     })
     .catch(err=>{
         console.log(err);
-        res.status(500).json(err);
+        res.status(500).render('error',{
+            currentPage:'whoops',
+        });
     });
     User.addPokemon(req.user.id)
     .catch(err=>{
         console.log(err);
-        res.status(500).json(err);
+        res.status(500).render('error',{
+            currentPage:'whoops',
+        });
     })
 };
 
@@ -50,7 +56,9 @@ pokemonsController.show=(req,res)=>{
     })
     .catch(err=>{
         console.log(err);
-        res.status(500).json(err);
+        res.status(500).render('error',{
+            currentPage:'whoops',
+        });
     });
 };
 
@@ -65,7 +73,9 @@ pokemonsController.showOther=(req,res)=>{
     })
     .catch(err=>{
         console.log(err);
-        res.status(500).json(err);
+        res.status(500).render('error',{
+            currentPage:'whoops',
+        });
     });
 };
 
@@ -75,12 +85,16 @@ pokemonsController.delete=(req,res)=>{
         res.redirect('/pokemons/pokemon-index');
     }).catch(err=>{
         console.log(err);
-        res.status(500).json(err);
+        res.status(500).render('error',{
+            currentPage:'whoops',
+        });
     });
     User.deletePokemon(req.user.id)
     .catch(err=>{
         console.log(err);
-        res.status(500).json(err);
+        res.status(500).render('error',{
+            currentPage:'whoops',
+        });
     })
 };
 
