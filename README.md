@@ -1,5 +1,11 @@
 # Poké Fight
 
+## What is Poké Fight?
+
+> Welcome, trainer! Create your own account and challenge other trainers! You can catch wild pokémons and build your own pokémon team.
+
+## Screenshots
+
 ![screenshot](./proposal/1.png)
 ![screenshot](./proposal/2.png)
 ![screenshot](./proposal/3.png)
@@ -9,10 +15,6 @@
 ![screenshot](./proposal/7.png)
 ![screenshot](./proposal/8.png)
 ![screenshot](./proposal/9.png)
-
-## What is Poké Fight?
-
-> Welcome, trainer! Create your own account and challenge other trainers! You can catch wild pokémons and build your own pokémon team.
 
 ## Technical Discussion
 
