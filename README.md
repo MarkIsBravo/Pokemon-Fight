@@ -1,6 +1,6 @@
 # Poké Fight
 
-https://shrouded-garden-20738.herokuapp.com/
+https://poke-fight.herokuapp.com/
 
 ## What is Poké Fight?
 
